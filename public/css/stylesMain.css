@@ -1,0 +1,26 @@
+*{
+    font-family: 'Roboto Slab';
+}
+body{
+    background-color: black;
+}
+.nomeSite, .nomeSite span{
+    font-family: 'Anton';
+    font-size: xxx-large;
+}
+.nomeSite span{
+    color: rgb(168 111 255);
+}
+.card-inicio{
+    position: relative;
+    height: 85vh;
+
+    background: url('/img/met.jpg');
+    background-size: cover;
+}
+.sub-titulo{
+    backdrop-filter: brightness(0.5);
+    color: white;
+    border: 1px rgba(255, 255, 255, 0.425) solid;
+    padding: 100px;
+}

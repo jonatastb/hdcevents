@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class, 'index']);
+
+Route::get('/events', [EventController::class, 'index']);
+
+Route::get('/events/create', [EventController::class, 'create']);
+
+Route::get('/contato', [ContactController::class, 'index']);
+
+Route::get('/produtos', [ProductsController::class, 'index']);
+
+Route::get('/produto/{id?}', [ProductsController::class, 'productId']);
