@@ -58,4 +58,6 @@ class EventController extends Controller
         return view('events.show', ['event' => $event]);
         
     }
+
+    $valor += ($BN2 / 30) * (($HL2 == "TOALHAS DE BANHO" || $HL2 == "LINHA ALTA" || $HL2 == "CUSTO BAIXO" || $HL2 == "COORDENADOS") ? 105 : ($HL2 == "TRAVESSEIROS" || $HL2 == "RANKING" ? 90 : ($HL2 == "MIX" ? 90 : 0)));
 }
