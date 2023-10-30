@@ -18,12 +18,12 @@ use App\Http\Controllers\WelcomeController;
 
 Route::get('/', [WelcomeController::class, 'index']);
 
-Route::get('/events', [EventController::class, 'index']);
+Route::get('/events/events', [EventController::class, 'index']);
 
-Route::get('/events/create', [EventController::class, 'create']);
+// Route::get('/events/event/{id}', [EventController::class, 'show']);
+
+Route::get('/events/new', [EventController::class, 'new']);
+
+Route::post('/events/create', [EventController::class, 'store']);
 
 Route::get('/contato', [ContactController::class, 'index']);
-
-Route::get('/produtos', [ProductsController::class, 'index']);
-
-Route::get('/produto/{id?}', [ProductsController::class, 'productId']);
